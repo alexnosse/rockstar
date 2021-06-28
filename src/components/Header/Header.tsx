@@ -2,6 +2,7 @@ import React from 'react';
 import Style from './Header.style';
 import logo from '../../assets/logo.png';
 import { LinkButton } from '../LinkButton/LinkButton';
+import { SearchInput } from '../SearchInput/SearchInput';
 
 export function Header() {
   return (
@@ -21,6 +22,7 @@ export function Header() {
       <Style.H1>
         The Best available movies 
       </Style.H1>
+      <SearchInput />
     </Style.HeaderContainer>
   );
 }

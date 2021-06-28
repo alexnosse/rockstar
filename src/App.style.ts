@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const App = styled.div`
-  > * {
-    max-width: 1100px;
+  > *:not(header) {
+    max-width: 973px;
     margin: 0 auto;
   }
 `;
