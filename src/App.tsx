@@ -1,12 +1,16 @@
 import { Header } from './components';
 import Style from './App.style';
 import { Movies } from './features/movies';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
     <Style.App>
       <Header />
-      <Movies />
+      <main>
+        <Movies />
+      </main>
+      <Footer />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />

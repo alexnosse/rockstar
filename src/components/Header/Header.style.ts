@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import background1 from '../../assets/1.jpg';
+// import background1 from '../../assets/1.jpg';
+import background2 from '../../assets/2.jpg';
 
 interface HeaderContainerProps {
   background?: string;
@@ -7,7 +8,7 @@ interface HeaderContainerProps {
 
 const HeaderContainer = styled.header<HeaderContainerProps>`
   height: 400px;
-  background: url(${(props) => props.background ?? background1});
+  background: url(${(props) => props.background ?? background2});
   background-size: cover;
   background-position: center;
 `;
@@ -23,6 +24,8 @@ const NavContainer = styled.nav`
   grid-column-gap: 12px;
   padding: 12px;
   align-items: center;
+  max-width: 973px;
+  margin: 0 auto;
 `;
 
 const H1 = styled.h1`
