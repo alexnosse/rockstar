@@ -9,7 +9,7 @@ const MoviesListSection = styled.section`
 
 const TitleContainer = styled.header`
   display: grid;
-  grid-template-columns: 30px auto 140px;
+  grid-template-columns: 30px auto 240px;
   align-items: center;
   > svg {
     color: #d73d00;
