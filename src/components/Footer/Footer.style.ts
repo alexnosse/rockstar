@@ -10,7 +10,8 @@ const Paragraph = styled.p`
   text-align: center;
 `;
 
-export default {
+const style = {
   Footer, 
   Paragraph,
 }
+export default  style;

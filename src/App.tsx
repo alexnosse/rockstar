@@ -1,61 +1,28 @@
-import { Header } from './components';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Style from './App.style';
-import { Movies } from './features/movies';
-import { Footer } from './components/Footer/Footer';
+import { MoviesList } from './features/movies';
+import { Footer, NavigationBar } from './components';
+import { MovieDetail } from './features/movies/MovieDetail';
 
 function App() {
   return (
     <Style.App>
-      <Header />
-      <main>
-        <Movies />
-      </main>
+      <Router>
+        <NavigationBar />
+        <main>
+          <Switch>
+            <Route path="/movie/:movieId">
+              <MovieDetail />
+            </Route>
+            <Route path="/" exact>
+              <MoviesList />
+            </Route>
+          </Switch>
+        </main>
+      </Router>
       <Footer />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header> */}
     </Style.App>
   );
 }

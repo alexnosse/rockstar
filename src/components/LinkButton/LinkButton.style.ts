@@ -1,4 +1,3 @@
-import { StringifyOptions } from 'querystring';
 import styled from 'styled-components';
 interface LinkButtonContainerProps {
   hasBorder: boolean;
@@ -16,7 +15,7 @@ const LinkButtonContainer = styled.div<LinkButtonContainerProps>`
     if (props.hasBorder) {
       return `
         border-radius: 30px;
-        border: 1px solid ${props.borderColor ?? 'orange'};
+        border: 1px solid ${props.borderColor ?? '#d73d00'};
       `;
     }
   }}
@@ -31,7 +30,8 @@ const LinkButtonContainer = styled.div<LinkButtonContainerProps>`
     }
   }
 `;
-
-export default {
+const style = {
   LinkButtonContainer,
 };
+
+export default style;

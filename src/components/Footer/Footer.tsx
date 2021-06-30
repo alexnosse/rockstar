@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { LinkButton } from '../LinkButton/LinkButton';
-
 import Style from './Footer.style';
 
 export function Footer() {

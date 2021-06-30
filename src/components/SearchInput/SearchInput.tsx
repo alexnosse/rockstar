@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 
 import Style from './SearchInput.style';
@@ -6,7 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import { useAppDispatch } from '../../app/hooks';
-import { clearMovies, fetchAllMovies, searchMovies } from '../../features/movies/moviesSlice';
+import {
+  clearMovies,
+  fetchAllMovies,
+  searchMovies,
+} from '../../features/movies/moviesSlice';
 
 export function SearchInput() {
   const [userQuery, setUserQuery] = useState('');
@@ -19,9 +23,6 @@ export function SearchInput() {
         dispatch(fetchAllMovies());
         return;
       }
-      console.log('[BUG] delayedQuery ', query);
-      console.log('[BUG] delayedQuery userQuery', userQuery);
-      
       dispatch(searchMovies(query));
     }, 500),
     [],
@@ -35,7 +36,11 @@ export function SearchInput() {
   return (
     <Style.SearchInputContainer>
       <FontAwesomeIcon icon={faSearch} fill="#fff" />
-      <Style.SearchInput onChange={onChange} value={userQuery} placeholder="Search for a movie..." />
+      <Style.SearchInput
+        onChange={onChange}
+        value={userQuery}
+        placeholder="Search for a movie..."
+      />
     </Style.SearchInputContainer>
   );
 }

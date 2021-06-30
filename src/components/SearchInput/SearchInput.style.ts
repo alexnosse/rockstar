@@ -27,7 +27,8 @@ const SearchInput = styled.input`
   }
 `;
 
-export default {
+const style = {
   SearchInputContainer,
   SearchInput,
 };
+export default style;

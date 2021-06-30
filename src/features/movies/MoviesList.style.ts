@@ -3,21 +3,23 @@ import styled from 'styled-components';
 const MoviesListSection = styled.section`
   display: flex;
   flex-direction: column;
+  max-width: 973px;
+  margin: 0 auto;
 `;
 
 const TitleContainer = styled.header`
   display: grid;
-  grid-template-columns: 30px auto;
+  grid-template-columns: 30px auto 140px;
   align-items: center;
   > svg {
-    color: #D9897B;
+    color: #d73d00;
     justify-self: flex-start;
     font-size: 1.4rem;
   }
 `;
 
 const H2 = styled.h2`
-  font-family: 'Bebas Neue Light';
+  font-weight: bold;
   padding-top: 6px;
 `;
 
@@ -29,11 +31,22 @@ const MoviesListContainer = styled.section`
   grid-template-areas:
     'highlight .'
     'highlight .';
+  > a:first-child {
+    grid-area: highlight;
+  }
 `;
 
-export default {
+const NoMoviesParagraph = styled.p`
+  font-size: 2.3rem;
+  color: #d73d00;
+  font-family: 'Bebas Neue';
+`;
+const style = {
   MoviesListSection,
   TitleContainer,
   H2,
   MoviesListContainer,
+  NoMoviesParagraph,
 };
+
+export default style;
