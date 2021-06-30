@@ -7,7 +7,7 @@ left menu, select API. Copy the value on the field labeled as "API Key (v3 auth)
 as the value of REACT_APP_TMDB_V3_KEY.
 
 After that, run 
-### `npm i` and then ### `npm start`
+`npm i` and then  `npm start`
 
 ## Available Scripts
 Then in the project directory, you can run:
