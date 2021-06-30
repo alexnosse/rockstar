@@ -1,8 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
+## SETUP THE PROJECT
 
-In the project directory, you can run:
+First, you should add your v4 api key. Please access your TMDB account (or create a new one), go to Profile -> Settings and on the
+left menu, select API. Copy the value on the field labeled as "API Read Access Token (v4 auth)", open the .env file and paste it
+as the value of REACT_APP_TMDB_V4_KEY
+
+
+## Available Scripts
+Then in the project directory, you can run:
 
 ### `npm start`
 

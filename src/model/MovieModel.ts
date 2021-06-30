@@ -6,7 +6,10 @@ export enum MovieCardSize {
 
 export type MovieModel = {
   id: number;
-  name: string;
-  voting_average: number;
+  title: string;
+  vote_average: number;
   poster_path?: string;
+  overview: string;
+  release_date: string;
+  backdrop_path?: string;
 };
